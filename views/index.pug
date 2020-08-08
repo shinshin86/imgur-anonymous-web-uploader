@@ -1,0 +1,26 @@
+extends layout
+
+block content
+  h1=pageText.title
+  if errorMessage
+    p(style='color:red')=errorMessage
+
+  h2=pageText.uploadImage
+  p=pageText.uploadImageDescription
+    form(action="/upload" method="POST" enctype="multipart/form-data")
+      input(type="file" name="file")
+      button(type="submit") #{pageText.uploadButton}
+
+  h2=pageText.deleteUploadedImage
+  p=pageText.deleteUploadedImageDescription
+    form(action="/delete" method="POST")
+      input(type="text" name="deleteHash")
+      button(type="submit") #{pageText.deleteButton}
+
+  div
+    form(action='/change-lang', method="GET")
+      label Displayed language:
+      select(name="lang")
+        option(value='en' selected= pageText.selectedLang === 'en') en
+        option(value='ja' selected= pageText.selectedLang === 'ja' ) ja
+      button(type='submit') Select

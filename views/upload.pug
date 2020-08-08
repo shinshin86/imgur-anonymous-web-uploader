@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  h1=pageText.uploadedMessage
+  div=pageText.imageUrl
+    a(href=url target="_blank" rel="noopener  noreferrer") #{url}
+    p
+      img(src=url alt="Uploaded image")
+  p=pageText.deleteHashText1
+  p(style="color:red") #{deleteHashText2}
+  p=pageText.deleteHash
+
+  h2=pageText.deleteImageNow
+    form(action="/delete" method="POST")
+      input(type="hidden" name="deleteHash" value=deleteHash)
+      button(type="submit") #{pageText.deleteButton}
+
+  a(href='/')
+   button=pageText.backToTopPage

@@ -1,0 +1,29 @@
+{
+  "name": "imgur-anonymous-web-uploader",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "dev": "nodemon ./bin/www",
+    "fmt": "prettier --write '**/*.{js,json,md}'"
+  },
+  "prettier": {
+    "singleQuote": true
+  },
+  "dependencies": {
+    "config": "^3.3.1",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "i18n": "^0.11.1",
+    "imgur-anonymous-uploader": "^1.0.1",
+    "morgan": "~1.9.1",
+    "multer": "^1.4.2",
+    "pug": "2.0.0-beta11"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4",
+    "prettier": "^2.0.5"
+  }
+}

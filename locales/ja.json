@@ -1,0 +1,20 @@
+{
+  "title": "Imgur anonymous image web uploder.",
+  "uploadImage": "画像をアップロード",
+  "uploadImageDescription": "画像ファイルを選択してアップロードボタンを押してください",
+  "uploadButton": "アップロード",
+  "deleteUploadedImage": "アップロードした画像の削除",
+  "deleteUploadedImageDescription": "削除したい画像のdeleteHashを入力して削除ボタンを押してください。",
+  "deleteButton": "削除",
+  "uploadedMessage": "Imgurへの画像アップロードが完了しました",
+  "imageUrl": "Image URL",
+  "deleteHashText1": "アップロードした画像を削除する場合、下記の文字列(deleteHash)が必要になりますので、必ず控えておくようにしてください。",
+  "deleteHashText2": "(deleteHashがない場合、その画像は削除することができなくなります。)",
+  "deleteImageNow": "または、こちらの削除ボタンを押すことですぐに削除が可能です。",
+  "backToTopPage": "トップページへ戻る",
+  "fileNotSelected": "画像ファイルが選択されていません",
+  "uploadFailed": "画像ファイルのアップロードに失敗しました",
+  "deleteHashNotEntered": "deleteHashが入力されていません",
+  "deleteFailed": "画像ファイルの削除に失敗しました",
+  "deleteMessage": "画像ファイルの削除が完了しました"
+}
