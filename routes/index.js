@@ -34,6 +34,10 @@ router.post('/upload', upload.single('file'), async (req, res, next) => {
   const uploader = new ImgurAnonymousUploader(process.env.IMGUR_CLIENT_ID);
   const response = await uploader.upload(req.file.path);
 
+  // TODO: Setup logger
+  console.log('Upload:');
+  console.log({ response, uploadFilePath: req.file.path });
+
   if (response.status !== 200) {
     return res.send({ message: res.__('uploadFailed') });
   }
@@ -65,6 +69,10 @@ router.post('/delete', async (req, res, next) => {
   const uploader = new ImgurAnonymousUploader(process.env.IMGUR_CLIENT_ID);
   const response = await uploader.delete(req.body.deleteHash);
 
+  // TODO: Setup logger
+  console.log('Delete:');
+  console.log({ response, deleteHash: req.body.deleteHash });
+
   if (response.status !== 200) {
     return res.send({ message: res.__('deleteFailed') });
   }
@@ -77,6 +85,10 @@ router.get('/change-lang', (req, res, next) => {
     maxAge: 900000,
     httpOnly: true,
   });
+
+  // TODO: Setup logger
+  console.log('Change Lang:');
+  console.log({ lang: req.query.lang });
 
   return res.redirect('/');
 });
