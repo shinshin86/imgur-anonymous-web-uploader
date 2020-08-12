@@ -7,6 +7,9 @@
     "dev": "nodemon ./bin/www",
     "fmt": "prettier --write '**/*.{js,json,md}'"
   },
+  "engines": {
+    "node": ">= 10"
+  },
   "prettier": {
     "singleQuote": true
   },
