@@ -13,7 +13,7 @@ const {
 
 router.get('/', (req, res, next) => {
   const pageText = setIndexPageText(res);
-  res.render('index', { title: 'Express', pageText });
+  res.render('index', { pageText });
 });
 
 router.get('/upload', (req, res, next) => {
