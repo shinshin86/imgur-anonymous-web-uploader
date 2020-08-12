@@ -2,14 +2,14 @@ const express = require('express');
 const router = express.Router();
 const fs = require('fs').promises;
 const multer = require('multer');
-const upload = multer({ dest: 'uploads/' });
+const { cookieName, uploadDir: dest } = require('config');
+const upload = multer({ dest });
 const ImgurAnonymousUploader = require('imgur-anonymous-uploader');
 const {
   setIndexPageText,
   setUploadPageText,
   setDeletePageText,
 } = require('../utils/i18n');
-const { cookieName } = require('config');
 
 router.get('/', (req, res, next) => {
   const pageText = setIndexPageText(res);

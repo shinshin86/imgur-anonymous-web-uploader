@@ -1,3 +1,4 @@
 {
-  "cookieName": "imguranonymouswebuploader"
+  "cookieName": "imguranonymouswebuploader",
+  "uploadDir": "uploads"
 }
